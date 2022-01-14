@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/cadastro.css">
+    <link rel="shortcut icon" href="../imagens/rpa.ico" />
+    <script src="../js/index.js"></script>
+    <title>Cadastros</title>
+</head>
+
+<body>
+    <div class="conteudo-pagina">
+        <aside class="sidebar grid-item grid-item-1">
+            <img class="logo" src="/imagens/logo.png" alt="">
+        </aside>
+
+        <div class="header-boax grid-item grid-item-2">
+            <header>
+                <h1 class="titulo-cadastro">Cadastre um colaborador</h1>
+            </header>
+        </div>
+
+        <div class="grid-item grid-item-4">
+            <h1 style="font-size: 1.5em; margin-left:15%;">Sessão de cadastro</h1>
+        </div>
+
+        <!-- Conteudo da página -->
+        <main class="grid-item grid-item-3">
+            <section class="content-container">
+                <form class="form-container" autocomplete="off" id="login-form">
+                    <div class="btn-caixa">
+                        <h1 class="titulo titulo-input">Código: </h1>
+                        <input id="codigo" name="codigo" class="btn btn-codigo" type="text" value=""
+                            placeholder="Informe ID a ser pesquisado" autocomplete="off" />
+                    </div>
+                    <div class="btn-caixa">
+                        <h1 class="titulo titulo-input">Nome</h1>
+                        <input id="nome" name="nome" class="btn btn-nome" type="text" value=""
+                            placeholder="Digite o nome" autocomplete="off" />
+                    </div>
+                    <div class="btn-caixa">
+                        <h1 class="titulo titulo-input">Data</h1>
+                        <input id="dataNasc" name="dataNasc" class="btn btn-data" type="date" autocomplete="off" />
+                    </div>
+                    <div class="btn-caixa">
+                        <h1 class="titulo titulo-input">Departamento</h1>
+                        <select id="depart" name="departamento" class="btn btn-depart">
+                            <option value="0">Escolha o departamento</option>
+                            <option value="1">Atendimento</option>
+                            <option value="2">Comercial</option>
+                            <option value="3">Compras</option>
+                            <option value="4">Contabilidade / Controladoria</option>
+                            <option value="5">COT</option>
+                            <option value="6">Financeiro</option>
+                            <option value="7">Gente e Gestão</option>
+                            <option value="8">Perdas e danos</option>
+                            <option value="9">Tecnologia</option>
+                        </select>
+                    </div>
+                    <div class="btn-caixa">
+                        <h1 class="titulo titulo-input">Função</h1>
+                        <input id="funcao" class="btn btn-func" name="funcao" type="text" value=""
+                            placeholder="Digite a função" autocomplete="off" />
+                    </div>
+                </form>
+
+                <div class="content-item content-item-direita">
+                    <h1 class="lema">
+                        Você faz.<br>
+                        A gente leva.
+                    </h1>
+
+                    <!-- Botões -->
+                    <div class="button-container">
+
+                        <button id="enviarBtn" class="btn btn-form" onclick="return capturaDados();">Cadastrar</button>
+                        <button id="consultaBtn" class="btn btn-form" type="submit"
+                            onclick="mostraRegistro();">Consultar</button>
+                        <button class="btn btn-form" type="submit" onclick="deletaColaborador();">Remover</button>
+                        <button class="btn btn-form" type="submit" onclick="resetaPadrao()">Limpar</button>
+                        <button id="idBtn" class="btn btn-form" type="submit"
+                            onclick="consultaColaborador()">Pesquisar</button>
+
+                    </div>
+
+                    <!-- Mensagens após cadastro -->
+                    <div class="confirma" id="confirmacao">
+                        <p> Cadastro realizado com sucesso !</p>
+                    </div>
+
+                    <div class="vazio" id="vazio">
+                        <p> Preencha todos os dados !</p>
+                    </div>
+
+                    <div class="confirmaExcluido" id="excluido">
+                        <p> Registro excluido com sucesso !</p>
+                    </div>
+
+                    <!-- Modal que aparecerá ao clicar no botão de consultar -->
+                    <div class="modal-container" id="modalID">
+                        <div class="registros">
+                            <h1 class="titulo titulo-registro">Consulta registros de colaboradores</h1>
+                            <input class="digita-nome" id="escolhe-nome" type="text" placeholder="Digite o nome">
+                            <select class="seleciona-depart" id="escolhe-depart" name="departamento"
+                                class="btn btn-depart">
+                                <option value="0">Escolha o departamento</option>
+                                <option value="1">Atendimento</option>
+                                <option value="2">Comercial</option>
+                                <option value="3">Compras</option>
+                                <option value="4">Contabilidade / Controladoria</option>
+                                <option value="5">COT</option>
+                                <option value="6">Financeiro</option>
+                                <option value="7">Gente e Gestão</option>
+                                <option value="8">Perdas e danos</option>
+                                <option value="9">Tecnologia</option>
+                            </select>
+                            <div class="inputBtn">
+                                <button id="pesquisa" class="btnInput pesquisaInput"
+                                    onclick="pesquisaRegistro()">Pesquisar</button>
+                                <button id="pesquisaTodos" class="btnInput pesquisaInput"
+                                    onclick="pesquisaTodos()">Pesquisar todos</button>
+                                <button id="limpa" class="btnInput pesquisaInput" onclick="limpaTabela()">Limpar
+                                    pesquisa</button>
+                            </div>
+                            <div id="resultados" class="resultado">
+                                <table class="tabela-container">
+                                    <tr class="tabela-header">
+                                        <th class="titulo-result">Código</th>
+                                        <th class="titulo-result">Nome</th>
+                                        <th class="titulo-result">Departamento</th>
+                                        <th class="titulo-result">Função</th>
+                                    </tr>
+                                    <tr class="result1" id="result">
+                                        <td class="result-id resultPesquisa"></td>
+                                        <td class="result-nome resultPesquisa"></td>
+                                        <td class="result-depart resultPesquisa"></td>
+                                        <td class="result-funcao resultPesquisa"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <button id="fechar" class="btnInput fechar" onclick="fecharModal()">X</button>
+                        </div>
+                    </div>
+            </section>
+    </div>
+    </main>
+    <footer class="grid-item grid-item-5 rodape">
+        <h1>RPA - Cadastros</h1>
+    </footer>
+    </div>
+
+    </div>
+</body>
+
+</html>

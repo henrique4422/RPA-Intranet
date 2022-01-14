@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/intranet.css">
+    <link rel="shortcut icon" href="Imagens/rpa.ico"/>
+    <script src="../js/index.js"></script>
+    <title>RPA</title>
+</head>
+
+<body>
+        <header class="main-header">
+            </div>
+            <div class="main-header-container">
+                <div class="img-larg">
+                    <img class="logo" src="../Imagens/logo.png">
+                </div>
+                <div class="btn-head">
+                    <a href="http://www.rpatransportes.com.br/index.php" target="_blank">
+                        <button class="btn btn-primeiro"> 
+                            RPA
+                        </button>
+                    </a>
+                    <a href="http://somostodosrpa.com.br/ramais/" target="_blank">
+                        <button class="btn btn-ultimo"> 
+                            Ramais
+                        </button>
+                    </a>    
+                </div>
+                <div class="lema">
+                    <h1 class="lema-cont">
+                        Você faz. 
+                        <br>A gente leva.
+                    </h1>
+                </div>
+            </div>
+        </header>
+
+    <section class="conteudo-section container">
+        <div class="conteudo">
+            <div class="section-header">
+                    <h2 class="titulo">
+                        Informativos
+                    </h2>
+            </div>
+
+            <div class="quadros">
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                        <!-- <h2 class= "titulo-cont">Campanhas</h2>  <hr style="width:100%"> Full-width images with number and caption text -->
+
+                        <div class="mySlides fade">
+                            <a href="http://www.rpatransportes.com.br/#servicos "target="_blank">
+                                <img src="/Imagens/Imagem1.png" style="width:100%">
+                            </a>
+                        </div>
+                    
+                        <div class="mySlides fade">
+                            <a href="http://www.rpatransportes.com.br/#sobre" target="_blank">
+                                <img src="/Imagens/Imagem2.png" style="width:100%">
+                            </a>
+                        </div>
+                    
+                        <div class="mySlides fade">
+                            <a href="http://www.rpatransportes.com.br/#atuacao" target="_blank">
+                                <img src="/Imagens/Imagem3.png" style="width:100%">
+                            </a>
+                        </div>
+                    
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <div class="aniversario-content">
+                    <h2 class= "titulo-cont titulo-aniver">Aniversariantes do Mês</h2>
+                        <div class="aniver-linha">
+                            <span class="nome-aniver aniver-header aniver-coluna ">Nome</span>
+                            <span class="data-aniver aniver-header aniver-coluna" >Data</span>
+                            <span class="depart-aniver aniver-header aniver-coluna">Departamento</span>
+                        </div>
+                        <div id="colab-content"></div>
+                </div>       
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="midia-cont">
+                <h1  class= "titulo-cont">Mídias Sociais</h1>
+                <div class="midias">
+                    <a href="https://pt-br.facebook.com/Rpatransporte "target="_blank">
+                        <img src="/Imagens/facebook-logo-2-1.png" class="social">
+                    </a>
+                    <a href="https://www.instagram.com/rpatransportes/"target="_blank">
+                        <img src="/Imagens/insta.png" class="social">
+                    </a>
+                    <a href="https://br.linkedin.com/company/rpa-transportes-e-logistica-ltda "target="_blank">
+                        <img src="/Imagens/linke.png" class="social">
+                    </a>
+                </div>
+            </div>
+            <div class="loc">
+                <h1  class= "titulo-cont">Localização</h1>    
+                <iframe  class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14668.653417594316!2d-47.0071352!3d-23.2007167!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5db91f016640c374!2sRPA%20TRANSPORTES%20E%20LOGISTICA%20LTDA%20-%20MATRIZ!5e0!3m2!1spt-BR!2sbr!4v1624371070840!5m2!1spt-BR!2sbr" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <address class="endereco">
+                    Endereço: Condomínio Log - Rodovia Dom Gabriel Paulino Couto, S/N, KM SP 300 KM 71 GALPAO2 - Medeiros, Jundiaí - SP, 13212-240
+                </address>
+            </div>
+        </div>
+    </footer>
+</body>
+
+    <script>
+        showSlides();
+        inicializaAniver();
+    </script>
+</html>

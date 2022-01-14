@@ -1,0 +1,485 @@
+@font-face {
+    font-family: rpafont;
+    src: url(../fonte/OpenSans-BoldItalic.ttf);
+    }
+
+* {box-sizing:border-box}
+
+html, body{
+        margin: 0;
+        padding: 0;
+        font-family: rpafont;
+        background-color: rgb(41,54,84, 101.09);
+    }
+
+
+/* Header Section */
+.main-header-container{
+    display: flex;
+}
+
+.main-header{
+    background-color: rgb(41,54,84, 101.09);
+    display: grid;
+    border-bottom: solid 2px rgb(189, 189, 189);
+    
+}
+
+.flex-head{
+display: flex;
+
+}
+
+.flex-item-1{
+flex-grow: 1;
+
+}
+
+.main-header-container img{
+    flex-grow: 1;
+    width: 10rem;
+    
+}
+
+.logo{
+        display: block;
+        margin-left: 150px;
+        margin-right: auto;
+    }
+
+.btn-head{
+    margin-left: 400px;
+    display: flex;
+    margin-right: 80px;
+    
+}
+
+.btn {
+        font-family: rpafont;
+        color: #ffffff;
+        border: none;
+        height: 80px;
+        width: 100px;
+        background: rgb(41,54,84, 101.09);
+        font-size: 1.3em;
+
+    }
+
+.btn:hover{
+        background: rgba(0, 0, 0, 0.1);
+        border-bottom: oldlace 1px solid;
+        cursor: pointer;
+    }
+
+.lema-cont{
+        margin-top: 2px;
+        margin-bottom: 1px;
+        width: 250px;
+        padding-left: 30px;
+    }
+
+.lema{
+        color: #fffeff;
+        text-align: end;
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        max-width: 25em;
+        font-size: 1em;
+        display: inline-flex;
+    }
+
+  
+/* Conteudo Section */
+.flex-container{
+    display: flex;
+    border: red solid 2px;
+    }
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.conteudo{
+        border-bottom: 1px white solid;
+        width: auto;
+    }
+
+
+.section-header{
+        color: #fffeff;
+        text-align: center;
+        font-size: 2.0em;
+        margin-bottom: 2px;
+        
+        
+    }
+
+.quadros{
+        display: flex;
+        justify-content: space-around;
+        width: 98%;
+    }
+
+a{
+    text-decoration: none;
+    color: inherit;
+
+    }
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  height: auto; width: 70%;
+  border: rgb(255, 0, 0) solid 2px;
+  transition-duration: 1s;
+  margin-left: 10px; margin-bottom: 10px;
+}
+
+.slideshow-container:hover {
+    position: relative;
+    margin: auto;
+    height: auto; 
+    border: rgb(255, 255, 255) solid 2px;
+    transition-duration: 1s;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+
+/* Hide the images by default */
+.mySlides {
+        display: none;
+    }
+
+/* Next & previous buttons */
+.prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+/* Position the "next button" to the right */
+.next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }   
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+/* Caption text */
+.text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+/* Fading animation */
+.fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+@-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+@keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+.aniversario-content{
+        width: auto; 
+        margin-left: 3px;
+        height: 430px;
+        width: fit-content;
+        color: #f2f2f2;
+        overflow: auto;
+    }
+
+.aniversario-content::-webkit-scrollbar-track
+    {
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    border: none;
+    }
+
+.aniversario-content::-webkit-scrollbar
+    {
+    width: 6px;
+    background-color: none;
+    }
+
+.aniversario-content::-webkit-scrollbar-thumb
+    {
+    border-radius: 10px;
+    background-color: #555;
+    }
+
+#colab-content span{
+    margin-left: 10px;
+    
+    }
+    
+
+.titulo-cont{
+        text-align: center;
+        font-size: 2.0em;
+        color: #fffeff;
+        padding-left: 1.0em;
+    }
+
+.aniver-header{
+        font-weight: bold;
+        font-size: 1.25em;
+        color: #f00000;
+        margin-left: 1.0em;
+    }
+
+
+.aniver-coluna {
+        margin-top: 10px;
+        
+    }
+
+.aniver-linha{
+        display: flex;
+        
+    }
+
+.nome-aniver{
+        width: 200px;
+        font-size: 1em;
+    }
+
+.data-aniver{
+        width: 12%;
+        font-size: 1em;
+        
+    }
+
+.depart-aniver{
+        width: 38%;
+        font-size: 1em;
+        
+    }
+
+/* Footer section */
+.main-footer {
+        padding: .10em 0;
+        margin: .25em 0;
+        font-family: rpafont; font-size: 20px; text-align: center; color:whitesmoke; 
+        display: flex;
+    }
+
+.footer-content{
+        display: flex;
+    }
+
+.midias{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+.social{
+        width: 80px;
+        border-radius: 50%;
+        display: flex;
+        margin: 10px;
+        margin-top: 15px;
+        border: whitesmoke solid 2px;
+    }
+
+.social:hover{
+        width: 80px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        margin-top: 15px;
+        border: rgb(41,54,84, 101.09); 
+        transition-duration: 2s;
+    }
+
+.loc{
+        margin-left: 250px;
+        display: block;
+    }
+
+.map{
+        border-radius: 10px;
+        transition-duration: 1s;
+    }
+
+.map:hover{
+        width: 550px;
+        height: 350px;
+        transition-duration: 1s;
+    }
+
+.endereco{
+    width: 500px;
+}
+
+
+/* Media Section */
+@media (max-width: 800px){
+    .main-header{
+        height: 100px;
+        
+    }
+
+    .logo{
+        margin: auto;
+        
+    }
+
+    .btn-head{
+        display: inline-flex;
+        width: fit-content;
+        margin: auto;
+        
+    }
+    
+    .lema{
+        height: auto;
+        text-align: end;
+        width: 200px;
+        margin: auto;
+        
+    }
+
+    
+
+    .lema-cont{
+        font-size: 1.3em;
+        margin: auto;
+    }
+
+    .quadros {
+        flex-wrap: wrap;
+    }
+
+    .mySlides {
+        width: 100%;
+        margin: auto;
+      }
+
+      .slideshow-container {
+          margin: auto;
+          width: 450px;
+      }
+
+      .slideshow-container:hover {
+        margin: auto;
+    }
+
+    .titulo-cont{
+        margin: auto;
+        text-align: center;
+    }
+
+    #colab-content  span{
+        font-size: 20px;
+
+        }
+
+    #colab-content .depart-aniver span{
+        margin-left: 30px;
+        font-size: 20px;
+
+        }
+
+    .aniversario-content{
+        display: block;
+        width: 500px;
+        margin-top: 80px;
+    }
+
+    .nome-aniver{
+        width: 30;
+        font-size: 1.5em;
+    }
+    
+    .data-aniver{
+        width: 12%;
+        font-size: 1.5em;
+        margin-left: 1.0em;
+    }
+    
+    .depart-aniver{
+        width: 38%;
+        font-size: 1.5em;
+    }
+
+    .footer-content{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .titulo-cont .footer-content{
+        width: 2%;
+        text-align: center;
+    }
+
+    .midias{
+        width: auto;
+        flex-direction: row;
+        justify-content: center;
+        padding-left: 35px;
+    }
+
+    .social{
+        margin: 5px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .social:hover{
+        margin: 5px;
+    }
+
+    .midia-cont{
+        justify-content: center;
+    }
+    
+    .loc{
+        margin: auto;
+    }
+
+    .map{
+        width: 400px;
+        height: 250px;
+    }
+    
+    .map:hover{
+        width: 400px;
+        height: 250px;
+    }
+}
