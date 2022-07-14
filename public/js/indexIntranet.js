@@ -1,3 +1,10 @@
+// function atualizaAniversarios() {
+//   const tabela = document.getElementsByClassName('.tabelaAniversario');
+
+// }
+
+
+
 function mostraAniversarios() {
   var mesCorrente = new Date();
   mesCorrente = mesCorrente.getMonth() + 1;
@@ -67,7 +74,7 @@ function mostraAniversarios() {
 function scrollAniver() {
   const sessaoScroll = document.getElementById('aniverBarra');
 
-  scrolldelay = setTimeout('scrollAniver()',500);
+  scrolldelay = setTimeout('scrollAniver()', 500);
   sessaoScroll.scrollBy(0, 2);
 
   sessaoScroll.addEventListener('scroll', function () {

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/upload.css">
+    <link rel="shortcut icon" href="../imagens/rpa.ico" />
+    <script src="../js/index.js"></script>
+    <title>RPA Transportes</title>
+</head>
+
+<body>
+
+    <h1 class="titulo">Upload de arquivos</h1>
+
+    <div>
+    <form method="post" enctype="multipart/form-data" action="/uploads/">  
+        <label for='arquivo' class="uploadBtn">Selecione um arquivo a ser enviado</label>
+        <input type="file" name="file[]" class="uploadBtn" multiple="multiple" id="arquivo">
+        <input type="submit" value="Enviar arquivo" class="uploadBtn" onclick="upload()" >
+    </form>
+</div>
+</body>
+</html>

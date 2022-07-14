@@ -87,7 +87,6 @@ body{
 }
 
 /* Conteudo */
-
 .content-container{
     display: flex;
     height: 100%; overflow: hidden; width: 90%;
